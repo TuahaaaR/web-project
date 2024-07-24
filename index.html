@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My eCommerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="topbar-1">
+            <div class="content">
+                <span>Welcome to VIGOR</span>
+                <div>
+                    <span>Deliver to Lahore</span>
+                    <span>Track Your Order</span>
+                    <span>My Orders</span>
+                </div>
+            </div>
+        </div>
+        <div class="topbar-2">
+            <div class="container">
+                <span class="logo"><a style="cursor: pointer; text-decoration: none; color: rgb(0, 129, 204);"
+                        href="/">VIGOR</a></span>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div style="display: flex; flex-direction: row; font-size: 15px; color: black;">
+                    <span>
+                        <a href="./pages/login.html" style="text-decoration: none; color: black;">Login</a> /
+                        <a href="/routes/register.html" style="text-decoration: none; color: black;">Signup</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="topbar-3">
+            <div class="container">
+                <div class="categories">
+                    <a class="category">Mobile Phones</a>
+                    <a class="category">Wires & Cables</a>
+                    <a class="category">In-Ear Audio</a>
+                    <a class="category">Keyboards</a>
+                    <a class="category">Speakers</a>
+                    <a class="category">Powerbanks & Batteries</a>
+                    <a class="category">Over-Ear Audio</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </header>
+
+    <section class="banner">
+        <div class="banner-image">
+            <img src="assets/image1.png" alt="Banner Image">
+        </div>
+    </section>
+
+    <div class="features-container">
+        <span>Safe Payments</span>
+        <span>Easy Returns</span>
+        <span>Nationwide Delivery</span>
+        <span>Best Prices</span>
+        <span>Cash On Delivery</span>
+        <span>24/7 Chat Support</span>
+    </div>
+
+    <section class="products">
+        <div class="container" style="display: flex; flex-direction: column;">
+            <h2>Featured Products</h2>
+            <div
+                style="display: grid; justify-content: space-around; width: 85vw; flex: 1 1 calc(25% - 20px); grid-template-columns: auto auto auto auto;">
+                <div class="product">
+                    <div class="discount-badge">20% OFF</div> <!-- Discount Badge -->
+                    <img src="assets/mobile1.png" alt="Product 1">
+                    <h3 class="prod-title">Product 1</h3>
+                    <p class="prod-price">$99.99</p>
+                    <a href="#" class="btn buy-now" onclick="addToCart('Product 1', 99.99, 'assets/mobile1.png')">Buy
+                        Now</a>
+                    <!-- Changed Button Text -->
+                </div>
+                <div class="product">
+                    <div class="discount-badge">15% OFF</div> <!-- Discount Badge -->
+                    <img src="assets/mobile2.png" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>$149.99</p>
+                    <a href="#" class="btn buy-now" onclick="addToCart('Product 2', 149.99, 'assets/mobile2.png')">Buy
+                        Now</a>
+                    <!-- Changed Button Text -->
+                </div>
+                <div class="product">
+                    <div class="discount-badge">30% OFF</div> <!-- Discount Badge -->
+                    <img src="assets/mobile3.png" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>$79.99</p>
+                    <a href="#" class="btn buy-now" onclick="addToCart('Product 3', 79.99, 'assets/mobile3.png')">Buy
+                        Now</a>
+                    <!-- Changed Button Text -->
+                </div>
+                <div class="product">
+                    <div class="discount-badge">8% OFF</div> <!-- Discount Badge -->
+                    <img src="assets/mobile4.png" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>$29.99</p>
+                    <a href="#" class="btn buy-now" onclick="addToCart('Product 4', 29.99, 'assets/mobile4.png')">Buy
+                        Now</a>
+                    <!-- Changed Button Text -->
+                </div>
+                <div class="product">
+                    <div class="discount-badge">5% OFF</div> <!-- Discount Badge -->
+                    <img src="assets/mobile5.png" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>$7.99</p>
+                    <a href="#" class="btn buy-now" onclick="addToCart('Product 5', 7.99, 'assets/mobile5.png')">Buy
+                        Now</a>
+                    <!-- Changed Button Text -->
+                </div>
+                <div class="product">
+                    <div class="discount-badge">0% OFF</div> <!-- Discount Badge -->
+                    <img src="assets/mobile6.png" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>$3.99</p>
+                    <a href="#" class="btn buy-now" onclick="addToCart('Product 6', 3.99, 'assets/mobile6.png')">Buy
+                        Now</a>
+                    <!-- Changed Button Text -->
+                </div>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </section>
+
+    <!-- Cart page (can be a separate HTML page or modal, shown here as an example) -->
+    <section class="cart" id="cart">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // Sample data for cart items (can be dynamic in real application)
+        let cart = [];
+
+        function addToCart(productName, productPrice, productImage) {
+            let item = cart.find(item => item.name === productName);
+
+            if (item) {
+                item.quantity += 1;
+            } else {
+                cart.push({
+                    id: cart.length + 1,
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: 1
+                });
+            }
+
+            // Update the cart display
+            updateCart();
+        }
+
+        // Function to update cart display
+        function updateCart() {
+            let cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = ''; // Clear previous content
+
+            cart.forEach(function (item) {
+                let li = document.createElement('li');
+                li.innerHTML = `
+                    <div class="item-info">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div>
+                            <h4>${item.name}</h4>
+                            <p>$${item.price.toFixed(2)}</p>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <input type="number" min="1" value="${item.quantity}" onchange="updateQuantity(${item.id}, this.value)">
+                        <a href="#" class="btn" onclick="updateQuantity(${item.id}, this.previousElementSibling.value)">Update</a>
+                        <a href="#" class="btn remove-btn" onclick="removeFromCart(${item.id})">Remove</a>
+                    </div>
+                `;
+                cartItems.appendChild(li);
+            });
+        }
+
+        // Function to update quantity of an item
+        function updateQuantity(itemId, newQuantity) {
+            let item = cart.find(item => item.id === itemId);
+            if (item) {
+                item.quantity = parseInt(newQuantity);
+                updateCart(); // Update cart display after changing quantity
+            }
+        }
+
+        // Function to remove an item from cart
+        function removeFromCart(itemId) {
+            cart = cart.filter(item => item.id !== itemId);
+            updateCart(); // Update cart display after removing item
+        }
+
+        // Initial cart update
+        updateCart();
+    </script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2 style="font-size: 40px;">Vigor</h2>
+
+                <h2 style="margin: 20px 0;">Contact Us</h2>
+                <div style="display: flex; flex-direction: column;">
+                    <span >Whatsapp: +9235467890</span>
+                    <span style="margin: 20px 0;">Call Us: +9235467890</span>
+                </div>
+                <a href="/">Download App</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Most Popular Categories</h3>
+                <ul>
+                    <li><a href="#">Staples</a></li>
+                    <li><a href="#">Beverages</a></li>
+                    <li><a href="#">Staples</a></li>
+                    <li><a href="#">Beverages</a></li>
+                    <li><a href="#">Staples</a></li>
+                    <li><a href="#">Beverages</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms And Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cancellation and Return Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 My eCommerce Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

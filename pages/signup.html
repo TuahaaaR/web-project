@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./signup.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="topbar-1">
+            <div class="content">
+                <span>Welcome to VIGOR</span>
+                <div>
+                    <span>Deliver to Lahore</span>
+                    <span>Track Your Order</span>
+                    <span>My Orders</span>
+                </div>
+            </div>
+        </div>
+        <div class="topbar-2">
+            <div class="container">
+                <span class="logo"><a style="cursor: pointer; text-decoration: none; color: rgb(0, 129, 204);" href="/">VIGOR</a></span>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div style="display: flex; flex-direction: row; font-size: 15px; color: black;">
+                    <span>
+                        <a href="/pages/login.html" style="text-decoration: none; color: black;">Login</a> /
+                        <a href="/pages/signup.html" style="text-decoration: none; color: black;">Signup</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="topbar-3">
+            <div class="container">
+                <div class="categories">
+                    <a class="category">Mobile Phones</a>
+                    <a class="category">Wires & Cables</a>
+                    <a class="category">In-Ear Audio</a>
+                    <a class="category">Keyboards</a>
+                    <a class="category">Speakers</a>
+                    <a class="category">Powerbanks & Batteries</a>
+                    <a class="category">Over-Ear Audio</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <div class="singup-container">
+        <h3>Registration</h3>
+        <hr>
+        <form action="../api/register.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <input type="password" name="cpassword" placeholder="Confirm Password" required>
+
+            <button type="submit">Register</button>
+
+            <div class="login-link">
+                Already a User? <a href="#">Login Here</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
