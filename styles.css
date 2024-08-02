@@ -1,11 +1,9 @@
-/* Reset some default styles for consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'HK Grotesk', sans-serif;
 }
-
 .header {
     background-color: #333;
     color: #fff;
@@ -13,7 +11,6 @@
     width: 100%;
     z-index: 1000;
 }
-
 .container {
     display: flex;
     flex-direction: column;
@@ -23,28 +20,22 @@
     margin: 0 auto;
     padding: 0 20px;
 }
-
 .header-icons a {
     margin-left: 15px;
     text-decoration: none;
     color: #fff;
 }
-
 .header-icons img {
     width: 25px;
     height: 25px;
 }
-
-/* Styles for products section */
 .products {
     padding: 40px 0;
 }
-
 .product {
     text-align: center;
     margin-bottom: 40px;
 }
-
 .product img {
     width: 300px;
     height: 300px;
@@ -52,29 +43,24 @@
     margin-bottom: 10px;
     border-radius: 10px;
 }
-
 .cart {
     background-color: #fff;
     padding: 50px 0;
     text-align: center;
 }
-
 .cart .container {
     text-align: left;
 }
-
 .cart h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
 }
-
 .cart #cart-items {
     margin-left: 30px;
     width: 80vw;
     list-style-type: none;
     padding: 0;
 }
-
 .cart #cart-items li {
     display: flex;
     justify-content: space-between;
@@ -84,42 +70,34 @@
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
 }
-
 .cart #cart-items li:last-child {
     border-bottom: none;
 }
-
 .cart #cart-items li .item-info {
     display: flex;
     align-items: center;
 }
-
 .cart #cart-items li .item-info img {
     max-width: 80px;
     margin-right: 20px;
 }
-
 .cart #cart-items li .item-info h4 {
     margin-bottom: 5px;
 }
-
 .cart #cart-items li .item-info p {
     color: #666;
     margin-bottom: 5px;
 }
-
 .cart #cart-items li .item-actions {
     display: flex;
     align-items: center;
 }
-
 .cart #cart-items li .item-actions input[type="number"] {
     width: 50px;
     padding: 5px;
     margin-right: 10px;
     text-align: center;
 }
-
 .cart #cart-items li .item-actions .btn {
     background-color: #333;
     color: #fff;
@@ -128,36 +106,18 @@
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
 .cart #cart-items li .item-actions .btn:hover {
     background-color: #555;
 }
-
 .cart #cart-items li .item-actions .remove-btn {
     background-color: #f00;
     margin-left: 10px;
 }
-
 .item-info img {
     width: 100px;
     height: 100px;
     object-fit: contain;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .topbar-1 {
     display: flex;
     justify-content: space-between;
@@ -166,19 +126,16 @@
     background-color: #EEEEEE;
     color: black;
 }
-
 .topbar-2 {
     background-color: white;
     color: #008ECC;
 }
-
 .topbar-2 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 0;
 }
-
 .topbar-1 .content {
     display: flex;
     justify-content: space-between;
@@ -186,16 +143,13 @@
     max-width: 1200px;
     margin: auto;
 }
-
 .topbar-1 .content span {
     margin-right: 20px;
 }
-
 .topbar-2 .container .logo {
     font-size: xx-large;
     font-weight: bold;
 }
-
 .topbar-2 .container {
     display: flex;
     justify-content: space-between;
@@ -204,7 +158,6 @@
     max-width: 1200px;
     margin: auto;
 }
-
 .search-bar input[type="text"] {
     width: 400px;
     padding: 10px;
@@ -212,56 +165,46 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .header .logo {
     font-size: 24px;
     font-weight: bold;
 }
-
 .main-nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
-
 .main-nav ul li a {
     text-decoration: none;
     color: black;
 }
-
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .header .logo {
     font-size: 24px;
     font-weight: bold;
 }
-
 .main-nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
-
 .main-nav ul li a {
     text-decoration: none;
     color: black;
 }
-
 .topbar-3 {
     padding: 10px 0;
     background-color: white;
 }
-
 .topbar-3 .container {
     display: flex;
     justify-content: space-between;
@@ -269,13 +212,11 @@
     max-width: 1200px;
     margin: auto;
 }
-
 .topbar-3 .categories {
     display: flex;
     gap: 15px;
     cursor: pointer;
 }
-
 .topbar-3 .category {
     background-color: rgb(255 235 55);
     border-radius: 50px;
@@ -285,16 +226,13 @@
     color: #333;
     text-decoration: none;
 }
-
 .topbar-3 .category:hover {
     background-color: #ccc;
 }
-
 header {
     position: relative;
     z-index: 100;
 }
-
 .banner {
     width: 80vw;
     margin: 0 auto;
@@ -302,18 +240,15 @@ header {
     padding-bottom: 20px;
     position: relative;
 }
-
 .banner .banner-image {
     width: 100%;
     overflow: hidden;
 }
-
 .banner .banner-image img {
     width: 100%;
     height: auto;
     display: block;
 }
-
 .banner .container {
     display: flex;
     flex-direction: column;
@@ -321,11 +256,9 @@ header {
     text-align: center;
     padding: 20px;
 }
-
 .banner .banner-content {
     max-width: 1000px;
 }
-
 .features-container {
     display: flex;
     justify-content: space-between;
@@ -336,7 +269,6 @@ header {
     width: 80vw;
     margin: 0 auto;
 }
-
 .features-container span {
     font-size: 18px;
     padding: 5px 30px;
@@ -344,7 +276,6 @@ header {
     position: relative;
     white-space: nowrap;
 }
-
 .features-container span:not(:last-child)::after {
     content: '';
     display: block;
@@ -355,18 +286,15 @@ header {
     right: -10px;
     top: 20%;
 }
-
-
 .product {
-    flex: 1 1 calc(25% - 20px); /* Take up 25% of container width, subtracting gap for spacing */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
     position: relative;
     border: 1px solid #EDEDED;
     border-radius: 10px;
     overflow: hidden;
     transition: border-color 0.3s;
 }
-
 .discount-badge {
     position: absolute;
     top: 10px;
@@ -378,7 +306,6 @@ header {
     font-size: 12px;
     font-weight: bold;
 }
-
 .product img {
     background-color: rgb(245, 245, 245);
     border-top-left-radius: 20px;
@@ -386,50 +313,33 @@ header {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-
 .product .prod-title,
 .product .prod-price {
     padding-left: 20px;
     text-align: left;
 }
-
 .btn {
     width: 90%;
     display: inline-block;
-    /* Make the button inline-block */
     padding: 10px 20px;
-    /* Padding inside the button */
     color: #fff;
-    /* Text color for the button */
     background-color: #007bff;
-    /* Background color for the button */
     border: none;
-    /* Remove default border */
     border-radius: 5px;
-    /* Rounded corners for the button */
     text-align: center;
-    /* Center text inside the button */
     text-decoration: none;
-    /* Remove underline from the link */
     margin-top: 10px;
-    /* Space between button and other content */
     margin-bottom: 10px;
-    /* Space between button and other content */
     transition: background-color 0.3s, border-color 0.3s;
-    /* Smooth transition for hover effects */
 }
-
 .btn.buy-now {
     background-color: #007bff;
-    /* Initial background color for the Buy Now button */
 }
-
 .container h2{
     text-align: left;
     width: 81vw;
     margin-bottom: 20px;
 }
-
 footer {
     background-color: rgb(0, 129, 204);
     color: #fff;
@@ -438,7 +348,6 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-
 .footer-container {
     width: 90%;
     max-width: 1200px;
@@ -446,13 +355,11 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 .footer-section {
     flex: 1;
     margin: 10px;
     min-width: 200px;
 }
-
 .footer-section h3 {
     color: #fff;
     border-bottom: 2px solid #fff;
@@ -460,35 +367,28 @@ footer {
     width: 65%;
     margin-bottom: 15px;
 }
-
 .footer-section p, .footer-section a {
     color: #fff;
     margin: 5px 0;
     text-decoration: none;
 }
-
 .footer-section a:hover {
     text-decoration: underline;
 }
-
 .footer-section ul {
     list-style: none;
     padding: 0;
 }
-
 .footer-section ul li {
     margin-bottom: 10px;
 }
-
 .footer-section .contact-info {
     margin-bottom: 15px;
 }
-
 .footer-section .contact-info span {
     display: block;
     margin-bottom: 5px;
 }
-
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
